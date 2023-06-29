@@ -30,6 +30,10 @@ class Alphabets_Page: UIViewController,UICollectionViewDelegate,UICollectionView
         let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! Alphabets
      
         cell2.layer.cornerRadius = 20
+        cell2.layer.shadowColor = UIColor.black.cgColor
+        cell2.layer.shadowRadius = 4.0
+        cell2.layer.shadowOpacity = 0.4
+        cell2.layer.shadowOffset = CGSize(width: 4, height: 4)
         cell2.layer.masksToBounds = true
         cell2.alphabetsImage.image = UIImage(named: arr[indexPath.row])
         return cell2

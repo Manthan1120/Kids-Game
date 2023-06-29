@@ -8,5 +8,6 @@
 import UIKit
 
 class Colour: UICollectionViewCell {
+    @IBOutlet weak var lableForColour: UILabel!
     @IBOutlet weak var coloursImage: UIImageView!
 }

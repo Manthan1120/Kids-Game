@@ -24,6 +24,10 @@ class Colour_Mixing_Page: UIViewController,UICollectionViewDelegate,UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell4 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! colourMixing
         cell4.layer.cornerRadius = 20
+        cell4.layer.shadowColor = UIColor.black.cgColor
+        cell4.layer.shadowRadius = 4.0
+        cell4.layer.shadowOpacity = 0.4
+        cell4.layer.shadowOffset = CGSize(width: 4, height: 4)
         cell4.layer.masksToBounds = true
         cell4.colourMixingImages.image = UIImage(named: arr[indexPath.row])
         return cell4

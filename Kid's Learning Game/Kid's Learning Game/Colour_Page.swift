@@ -23,7 +23,13 @@ class Colour_Page: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! Colour
         cell3.layer.cornerRadius = 20
+        cell3.layer.cornerRadius = 20
+        cell3.layer.shadowColor = UIColor.black.cgColor
+        cell3.layer.shadowRadius = 4.0
+        cell3.layer.shadowOpacity = 0.4
+        cell3.layer.shadowOffset = CGSize(width: 4, height: 4)
         cell3.layer.masksToBounds = true
+        cell3.lableForColour.text = arr[indexPath.row]
         cell3.coloursImage.image = UIImage(named: "\(arr[indexPath.row])")
         return cell3
     }
